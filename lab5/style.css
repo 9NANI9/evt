@@ -3,7 +3,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center
+    align-items:center;
+    max-width: 1440px;
 }
 .anchor{
     text-decoration-line: none;
@@ -16,4 +17,44 @@ body{
 }
 #p{
     font-weight: 600;
+    font-family: "Font1";
 }
+
+@font-face {
+    font-family: 'MyFont'; 
+    src: url('fonts/Myfont-Regular.ttf') format('truetype'); 
+  }
+
+  @font-face {
+    font-family: 'Font1'; 
+    src: url('fonts/impact2.ttf') format('truetype'); 
+  }
+
+  @font-face {
+    font-family: 'Font2'; 
+    src: url('fonts/d9464-arkhip_font.ttf') format('truetype'); 
+  }
+
+  @font-face {
+    font-family: 'Font3'; 
+    src: url('fonts/beer-money12.ttf') format('truetype'); 
+  }
+
+ #Alesha{
+    font-family: "MyFont";
+ } 
+ #Dobrynuya{
+    font-family: "Font2";
+ }
+ #head{
+    font-family: "Font3";
+ }
+ #section1{
+    text-align: center;
+ }
+ #section2{
+    text-align: end;
+ }
+ #section3{
+    text-align: start;
+ }
