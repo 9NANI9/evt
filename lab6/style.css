@@ -163,71 +163,43 @@ animation: bounce 4s forwards ;
 }
 
 
-
 .container {
-  position: relative;
+  margin-left: 50px; 
 }
 
-.pendulum {
-  position: relative;
-  width: 200px;
-  height: 300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+.newton_cradle {
+  width: 300px;
+  height: 160px;
+  padding: 0 0 0 25px;
+  border-top: 20px solid;
 }
 
 .ball {
-  width: 40px;
-  height: 40px;
-  background-color: #3498db;
-  border-radius: 50%;
+  position: relative;
+  width: 50px;
+  background-color: blue;
+  height: 50px;
+  border-radius: 100%;
+  transform-origin: 50% -100px;
+  margin-top: 100px; 
+  float: left; 
+  box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%); 
+}
+
+.ball::after {
+  content: ''; 
+  display: block;
   position: absolute;
-  bottom: 0;
-  transition: transform 0.5s ease;
+  top: -100px; 
+  left: 24px; 
+  height: 100px;
+  width: 1px; 
+  background: gray;
 }
 
-#ball1 { 
-  left: 10%; 
-  animation: left 1s infinite ease-out; /* Анимация оттягивания */
-}
+.ball:nth-child(1) {animation: ball1 0.5s infinite alternate 0.5s ease-out;}
+.ball:nth-child(5) {animation: ball5 0.5s infinite alternate ease-out;}
 
-#ball2 { left: 30%; }
-#ball3 { left: 50%; }
-#ball4 { left: 70%; }
-#ball5 { left: 90%; }
-
-@keyframes left {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-50px); }
-  50% { transform: translateX(0); }
-  75% { transform: translateX(0); }
-  100% { transform: translateX(0); } /* Оттягивание влево */
-}
-
-@keyframes right {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(0); }
-  50% { transform: translateX(0); }
-  75% { transform: translateX(50px); }
-  100% { transform: translateX(0); } /* Отталкивание вправо */
-}
-
-@keyframes center {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  50% { transform: translateX(0); }
-  75% { transform: translateX(10px); }
-  100% { transform: translateX(0); } /* Отталкивание вправо */
-}
-
-.ball:nth-child(2),
-.ball:nth-child(3),
-.ball:nth-child(4) {
-  animation: center  1s infinite ; /* Задержка для одновременного отталкивания */
-}
-
-/* Анимация отталкивания остальных шариков одновременно */ 
-.ball:nth-child(5) {
-  animation: right  1s infinite ; /* Задержка для одновременного отталкивания */
-}
+@keyframes ball1 {0%, 50% {transform: rotate(0);} 100% {transform: rotate(30deg);}}
+@keyframes ball5 {0%, 50% {transform: rotate(0);} 100% {transform: rotate(-30deg);}}
+q

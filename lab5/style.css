@@ -20,6 +20,16 @@ body{
     font-family: "Font1";
 }
 
+
+@media (min-width: 1440px) {
+   .body {
+     display: flex;
+     flex-direction: column;
+     align-items: center; /* Центрирование по вертикали */
+     text-align: center; /* Центрирование текста */
+   }
+ }
+
 @font-face {
     font-family: 'MyFont'; 
     src: url('fonts/Myfont-Regular.ttf') format('truetype'); 
