@@ -1,3 +1,4 @@
+
 function changeDirection(direction, button) {
     const taskContainer = document.querySelector('.task-container');
     taskContainer.style.display = 'flex'; // Убедитесь, что контейнер использует flexbox

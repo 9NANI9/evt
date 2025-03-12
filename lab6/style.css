@@ -67,8 +67,9 @@ color: green;
 content: '';
 position: absolute;
 left: 50%;
-bottom: 0;
+/* bottom: 0; */
 width: 0;
+display: block;
 height: 2px;
 background: green;
 transition: 0.4s ease-in-out;
@@ -202,4 +203,3 @@ animation: bounce 4s forwards ;
 
 @keyframes ball1 {0%, 50% {transform: rotate(0);} 100% {transform: rotate(30deg);}}
 @keyframes ball5 {0%, 50% {transform: rotate(0);} 100% {transform: rotate(-30deg);}}
-q

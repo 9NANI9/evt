@@ -1,0 +1,87 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(16, 233, 215, 0.178);
+  }
+  .grid{
+    display:grid ;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr)
+  }
+  .grid article:nth-child(1){
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .grid article:nth-child(3){
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .grid article:nth-child(9){
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .all-container {
+    display: grid;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  #controls-container {
+    display: flex;
+    gap: 20px;
+    width: 300px;
+  }
+  .active {
+    background-color: #008CBA; /* Цвет фона для активной кнопки */
+    color: rgb(223, 156, 156); /* Цвет текста для активной кнопки */
+  }
+  .controller-btn {
+    background-color: white;
+    outline: none;
+    border: 3px solid red;
+    border-radius: 10px;
+  }
+  .task-container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 50px);
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid;
+    border-color: black ;
+    flex-direction: row;
+    width: 50%;
+  }
+  .box {
+    display: flex;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    background-color: aqua;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
